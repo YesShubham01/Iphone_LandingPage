@@ -1,5 +1,21 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap/gsap-core";
+
 const GsapTo = () => {
   // TODO: Implement the gsap.to() method
+
+  //UseGSAP is like useEffect for animation
+  useGSAP(() => {
+    gsap.to('#blue-box', {
+      x: 250,
+      repeat: -1,
+      yoyo: true,
+      rotation: 360,
+      duration: 2,
+      ease:'elastic'
+    });
+  }, []
+  )
 
   return (
     <main>
